@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orders · MODDY</title>
+<link rel="stylesheet" href="style.css">
+<body>
+<header><strong>MODDY<span>.</span></strong><span>Store operations</span></header>
+<main>
+<div class="heading"><div><h1>Orders</h1><p>Track and manage your store’s orders.</p></div><span class="demo">Demo store</span></div>
+<section class="metrics" aria-label="Order summary">
+<div>Orders<strong id="total">0</strong></div><div>Awaiting dispatch<strong id="pending">0</strong></div><div>Order value<strong id="value">£0</strong></div>
+</section>
+<section class="panel" aria-label="Orders list">
+<div class="filters">
+<label>Search orders<input id="search" type="search" placeholder="Order number or product"></label>
+<label>Status<select id="status"><option>All statuses</option><option>Processing</option><option>Shipped</option><option>Delivered</option></select></label>
+</div>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Order</th><th scope="col">Product</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col">Total</th></tr></thead>
+<tbody id="orders"></tbody>
+</table></div>
+<p id="empty" role="status" hidden>No matching orders.</p>
+</section>
+</main>
+<script src="orders.js"></script>
+</body>
+</html>
